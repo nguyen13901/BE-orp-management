@@ -1,18 +1,6 @@
 version: '3.7'
 name: orp-container-test
 services:
-  proxy:
-    image: nginx
-    ports:
-      - 80: 80
-      - 8000: 8000
-      - 443: 443
-    volumes:
-      - ./proxy/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./proxy/certs:/etc/nginx/certs
-    depends_on:
-      - web
-
   db:
     image: mysql:8
     ports:
